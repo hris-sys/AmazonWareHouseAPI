@@ -1,0 +1,9 @@
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Models\bin\Debug\netcoreapp3.1\Data.Models.deps.json
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Models\bin\Debug\netcoreapp3.1\Data.Models.dll
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Models\bin\Debug\netcoreapp3.1\Data.Models.pdb
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Models\obj\Debug\netcoreapp3.1\Data.Models.csprojAssemblyReference.cache
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Models\obj\Debug\netcoreapp3.1\Data.Models.AssemblyInfoInputs.cache
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Models\obj\Debug\netcoreapp3.1\Data.Models.AssemblyInfo.cs
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Models\obj\Debug\netcoreapp3.1\Data.Models.csproj.CoreCompileInputs.cache
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Models\obj\Debug\netcoreapp3.1\Data.Models.dll
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Models\obj\Debug\netcoreapp3.1\Data.Models.pdb

@@ -7,6 +7,12 @@ namespace Data.Models.Models
 {
     public class Item : BaseModel, IAuditInfo
     {
+        public Item()
+        {
+            this.OrderItems = new HashSet<OrderItem>();
+            this.ItemCategories = new HashSet<ItemCategory>();
+        }
+
         [Required(ErrorMessage = "The item price is required!")]
         public decimal Price { get; set; }
 
@@ -19,9 +25,5 @@ namespace Data.Models.Models
         public ICollection<OrderItem> OrderItems { get; set; }
 
         public ICollection<ItemCategory> ItemCategories { get; set; }
-
-        public ICollection<ItemCart> ItemCarts { get; set; }
-
-        //add them to ctor
     }
 }

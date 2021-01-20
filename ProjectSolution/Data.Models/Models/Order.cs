@@ -8,6 +8,10 @@ namespace Data.Models.Models
 {
     public class Order : IIdable, IAuditInfo
     {
+        public Order()
+        {
+            this.OrderItems = new HashSet<OrderItem>();
+        }
         public int Id { get; set; }
 
         [Required]
@@ -28,7 +32,7 @@ namespace Data.Models.Models
         public int CityId { get; set; }
 
         public User User { get; set; }
-        public int UserId { get; set; }
+        public string UserId { get; set; }
 
         public ICollection<OrderItem> OrderItems { get; set; }
     }

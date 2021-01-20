@@ -1,0 +1,15 @@
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Connection\bin\Debug\netcoreapp3.1\Data.Models.dll
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Connection\obj\Debug\netcoreapp3.1\Data.Connection.csprojAssemblyReference.cache
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Connection\obj\Debug\netcoreapp3.1\Data.Connection.AssemblyInfoInputs.cache
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Connection\obj\Debug\netcoreapp3.1\Data.Connection.AssemblyInfo.cs
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Connection\bin\Debug\netcoreapp3.1\Data.Connection.deps.json
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Connection\bin\Debug\netcoreapp3.1\Data.Connection.runtimeconfig.json
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Connection\bin\Debug\netcoreapp3.1\Data.Connection.runtimeconfig.dev.json
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Connection\bin\Debug\netcoreapp3.1\Data.Connection.dll
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Connection\bin\Debug\netcoreapp3.1\Data.Connection.pdb
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Connection\bin\Debug\netcoreapp3.1\Data.Models.pdb
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Connection\obj\Debug\netcoreapp3.1\Data.Connection.csproj.CoreCompileInputs.cache
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Connection\obj\Debug\netcoreapp3.1\Data.Connection.csproj.CopyComplete
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Connection\obj\Debug\netcoreapp3.1\Data.Connection.dll
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Connection\obj\Debug\netcoreapp3.1\Data.Connection.pdb
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Connection\obj\Debug\netcoreapp3.1\Data.Connection.genruntimeconfig.cache

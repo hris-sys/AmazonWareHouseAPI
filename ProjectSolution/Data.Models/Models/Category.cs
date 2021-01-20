@@ -6,8 +6,11 @@ namespace Data.Models.Models
 {
     public class Category : BaseModel
     {
+        public Category()
+        {
+            this.ItemCategories = new HashSet<ItemCategory>();
+        }
         public ICollection<ItemCategory> ItemCategories { get; set; }
 
-        //add to ctor
     }
 }
