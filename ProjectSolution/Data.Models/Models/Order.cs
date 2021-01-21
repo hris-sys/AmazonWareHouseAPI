@@ -6,13 +6,13 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Data.Models.Models
 {
-    public class Order : IIdable, IAuditInfo
+    public class Order : BaseModel, IAuditInfo
     {
         public Order()
         {
             this.OrderItems = new HashSet<OrderItem>();
+            this.Name = this.User.Name + "'s order";
         }
-        public int Id { get; set; }
 
         [Required]
         public OrderStatus Status { get; set; }
@@ -29,10 +29,10 @@ namespace Data.Models.Models
         public DateTime? DeletedAt { get; set; }
 
         public City City { get; set; }
-        public int CityId { get; set; }
+        public Guid CityId { get; set; }
 
         public User User { get; set; }
-        public string UserId { get; set; }
+        public Guid UserId { get; set; }
 
         public ICollection<OrderItem> OrderItems { get; set; }
     }

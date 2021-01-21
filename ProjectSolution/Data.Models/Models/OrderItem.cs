@@ -7,12 +7,12 @@ namespace Data.Models.Models
 {
     public class OrderItem : IIdable
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         public Order Order { get; set; }
-        public int OrderId { get; set; }
+        public Guid OrderId { get; set; }
 
         public Item Item { get; set; }
-        public int ItemId { get; set; }
+        public Guid ItemId { get; set; }
     }
 }

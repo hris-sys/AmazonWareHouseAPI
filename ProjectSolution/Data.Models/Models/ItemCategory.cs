@@ -1,15 +1,16 @@
 ﻿using Data.Models.Interfaces;
+using System;
 
 namespace Data.Models.Models
 {
     public class ItemCategory : IIdable
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         public Item Item { get; set; }
-        public int ItemId { get; set; }
+        public Guid ItemId { get; set; }
 
         public Category Category { get; set; }
-        public int CategoryId { get; set; }
+        public Guid CategoryId { get; set; }
     }
 }

@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>7f09b595-4b92-4945-8938-1e635c03715a</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,10 +20,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Data.Models\Data.Models.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ModelsConfiguration\" />
   </ItemGroup>
 
 </Project>

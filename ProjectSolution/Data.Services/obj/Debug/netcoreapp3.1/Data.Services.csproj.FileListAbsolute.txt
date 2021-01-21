@@ -1,0 +1,14 @@
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Services\obj\Debug\netcoreapp3.1\Data.Services.csprojAssemblyReference.cache
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Services\obj\Debug\netcoreapp3.1\Data.Services.AssemblyInfoInputs.cache
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Services\obj\Debug\netcoreapp3.1\Data.Services.AssemblyInfo.cs
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Services\obj\Debug\netcoreapp3.1\Data.Services.csproj.CoreCompileInputs.cache
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Services\bin\Debug\netcoreapp3.1\Data.Services.deps.json
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Services\bin\Debug\netcoreapp3.1\Data.Services.dll
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Services\bin\Debug\netcoreapp3.1\Data.Services.pdb
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Services\bin\Debug\netcoreapp3.1\Data.Connection.dll
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Services\bin\Debug\netcoreapp3.1\Data.Models.dll
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Services\bin\Debug\netcoreapp3.1\Data.Connection.pdb
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Services\bin\Debug\netcoreapp3.1\Data.Models.pdb
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Services\obj\Debug\netcoreapp3.1\Data.Services.csproj.CopyComplete
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Services\obj\Debug\netcoreapp3.1\Data.Services.dll
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\Data.Services\obj\Debug\netcoreapp3.1\Data.Services.pdb
