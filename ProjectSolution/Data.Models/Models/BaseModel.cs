@@ -9,7 +9,7 @@ namespace Data.Models.Models
     {
         public BaseModel()
         {
-            this.Id = new Guid();
+            this.Id = Guid.NewGuid();
         }
 
         public Guid Id { get; set; }

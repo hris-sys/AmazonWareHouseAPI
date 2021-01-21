@@ -8,10 +8,11 @@ namespace Data.Models.Models
 {
     public class Order : BaseModel, IAuditInfo
     {
-        public Order()
+        public Order(User user)
         {
             this.OrderItems = new HashSet<OrderItem>();
-            this.Name = this.User.Name + "'s order";
+            this.User = user;
+            this.Name = user.Name + "'s order";
         }
 
         [Required]

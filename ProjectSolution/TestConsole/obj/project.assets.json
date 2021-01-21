@@ -1885,6 +1885,20 @@
         "runtime": {
           "bin/placeholder/Data.Models.dll": {}
         }
+      },
+      "Data.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Data.Connection": "1.0.0",
+          "Data.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Data.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Data.Services.dll": {}
+        }
       }
     }
   },
@@ -6549,11 +6563,17 @@
       "type": "project",
       "path": "../Data.Models/Data.Models.csproj",
       "msbuildProject": "../Data.Models/Data.Models.csproj"
+    },
+    "Data.Services/1.0.0": {
+      "type": "project",
+      "path": "../Data.Services/Data.Services.csproj",
+      "msbuildProject": "../Data.Services/Data.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Data.Connection >= 1.0.0",
+      "Data.Services >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.2"
     ]
   },
@@ -6586,6 +6606,9 @@
           "projectReferences": {
             "D:\\Hristiyan\\ВТУ\\2-ри курс\\1-ви семестър\\API\\Project\\CourseWork\\AmazonWareHouseAPI\\ProjectSolution\\Data.Connection\\Data.Connection.csproj": {
               "projectPath": "D:\\Hristiyan\\ВТУ\\2-ри курс\\1-ви семестър\\API\\Project\\CourseWork\\AmazonWareHouseAPI\\ProjectSolution\\Data.Connection\\Data.Connection.csproj"
+            },
+            "D:\\Hristiyan\\ВТУ\\2-ри курс\\1-ви семестър\\API\\Project\\CourseWork\\AmazonWareHouseAPI\\ProjectSolution\\Data.Services\\Data.Services.csproj": {
+              "projectPath": "D:\\Hristiyan\\ВТУ\\2-ри курс\\1-ви семестър\\API\\Project\\CourseWork\\AmazonWareHouseAPI\\ProjectSolution\\Data.Services\\Data.Services.csproj"
             }
           }
         }

@@ -9,6 +9,7 @@
       "TestConsole/1.0.0": {
         "dependencies": {
           "Data.Connection": "1.0.0",
+          "Data.Services": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.2"
         },
         "runtime": {
@@ -1407,6 +1408,15 @@
         "runtime": {
           "Data.Models.dll": {}
         }
+      },
+      "Data.Services/1.0.0": {
+        "dependencies": {
+          "Data.Connection": "1.0.0",
+          "Data.Models": "1.0.0"
+        },
+        "runtime": {
+          "Data.Services.dll": {}
+        }
       }
     }
   },
@@ -2276,6 +2286,11 @@
       "sha512": ""
     },
     "Data.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Data.Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

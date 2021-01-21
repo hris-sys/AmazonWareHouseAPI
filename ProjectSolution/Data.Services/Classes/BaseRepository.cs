@@ -11,15 +11,12 @@ using System.Threading.Tasks;
 
 namespace Data.Services.Classes
 {
-    public class BaseRepository<T> : IBaseRepository<T> where T : BaseModel
+    public class BaseRepository<T> : BaseContext, IBaseRepository<T> where T : BaseModel
     {
-        public BaseRepository(AmazonDbContext context)
+        public BaseRepository(AmazonDbContext context) : base(context)
         {
-            this.Context = context;
             this.DbSet = context.Set<T>();
         }
-
-        protected AmazonDbContext Context { get; set; }
 
         protected DbSet<T> DbSet { get; set; }
 
