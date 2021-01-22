@@ -8,11 +8,10 @@ namespace Data.Models.Models
 {
     public class Order : BaseModel, IAuditInfo
     {
-        public Order(User user)
+        public Order()
         {
             this.OrderItems = new HashSet<OrderItem>();
-            this.User = user;
-            this.Name = user.Name + "'s order";
+            this.TotalCost = 0m;
         }
 
         [Required]
@@ -29,11 +28,13 @@ namespace Data.Models.Models
 
         public DateTime? DeletedAt { get; set; }
 
+        public bool IsDeleted { get; set; }
+
         public City City { get; set; }
-        public Guid CityId { get; set; }
+        public string CityId { get; set; }
 
         public User User { get; set; }
-        public Guid UserId { get; set; }
+        public string UserId { get; set; }
 
         public ICollection<OrderItem> OrderItems { get; set; }
     }

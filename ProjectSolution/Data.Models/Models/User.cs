@@ -1,4 +1,5 @@
 ﻿using Data.Models.Common;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -14,6 +15,7 @@ namespace Data.Models.Models
         [Required]
         [EmailAddress]
         public string Email { get; set; }
+
         public UserRoles Role { get; set; }
 
         [Required]
@@ -23,5 +25,9 @@ namespace Data.Models.Models
         public uint Age { get; set; }
 
         public ICollection<Order> Orders { get; set; }
+
+        public City City { get; set; }
+
+        public string CityId { get; set; }
     }
 }

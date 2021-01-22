@@ -6,6 +6,6 @@ namespace Data.Models.Interfaces
     public interface IIdable
     {  
         [Required]
-        public Guid Id { get; set; }
+        public string Id { get; set; }
     }
 }

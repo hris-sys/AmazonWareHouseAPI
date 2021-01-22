@@ -1,10 +1,18 @@
-﻿using System;
+﻿using Data.Connection;
+using Data.Models.Models;
+using Data.Services.Interfaces;
+using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq.Expressions;
+using System.Threading.Tasks;
 
 namespace Data.Services.Classes
 {
-    class CategoryRepository
+    public class CategoryRepository : BaseRepository<Category>, ICategoryRepository
     {
+        public CategoryRepository(AmazonDbContext context) : base(context)
+        {
+
+        }
     }
 }

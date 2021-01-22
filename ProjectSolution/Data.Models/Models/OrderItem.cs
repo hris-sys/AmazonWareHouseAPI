@@ -7,12 +7,16 @@ namespace Data.Models.Models
 {
     public class OrderItem : IIdable
     {
-        public Guid Id { get; set; }
+        public OrderItem()
+        {
+            this.Id = Guid.NewGuid().ToString().Substring(0, 7);
+        }
+        public string Id { get; set; }
 
         public Order Order { get; set; }
-        public Guid OrderId { get; set; }
+        public string OrderId { get; set; }
 
         public Item Item { get; set; }
-        public Guid ItemId { get; set; }
+        public string ItemId { get; set; }
     }
 }

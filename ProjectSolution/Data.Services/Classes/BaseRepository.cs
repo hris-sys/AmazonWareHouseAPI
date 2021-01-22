@@ -30,7 +30,7 @@ namespace Data.Services.Classes
             return DbSet;
         }
 
-        public T GetById(Guid id)
+        public T GetById(string id)
         {
             return DbSet.Find(id);
         }
@@ -47,7 +47,7 @@ namespace Data.Services.Classes
             await SaveChangesAsync();
         }
 
-        public void Remove(Guid id)
+        public void Remove(string id)
         {
             var entity = GetById(id);
 
@@ -57,7 +57,7 @@ namespace Data.Services.Classes
             DbSet.Remove(entity);
         }
 
-        public async Task RemoveAndSaveAsync(Guid id)
+        public async Task RemoveAndSaveAsync(string id)
         {
             Remove(id);
 

@@ -3,35 +3,26 @@ using Data.Models.Models;
 using Data.Services.Classes;
 using System;
 using System.Threading.Tasks;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace TestConsole
 {
     public class Program
     {
-        static async Task Main(string[] args) {
+        static async Task Main(string[] args)
+        {
 
             var db = new AmazonDbContext();
-
-            var itemCatService = new ItemCategoryService(db);
-
-            var category = new Category()
-            {
-                Name = "Fruits",
-            };
-
-
-            var item = new Item()
-            {
-                Name = "Apple",
-                CreatedAt = DateTime.UtcNow,
-                Price = 1.5m,
-            };
-
+            //var itemRepo = new ItemRepository(db);
+            //var list = db.Items.Include(x => x.ItemCategories).ToList();
             
 
-            await itemCatService.InsertAndSaveAsync(item, category);
+            var orderRepo = new OrderRepository(db);
+            var city = db.Cities.FirstOrDefault(n => n.Name == "Sofia");
+            var user = db.Users.FirstOrDefault(n => n.Name == "Ivan");
 
-            await db.SaveChangesAsync();
+            await orderRepo.CreateOrder(user, city, "Please ship it fast!");
         }
     }
 }

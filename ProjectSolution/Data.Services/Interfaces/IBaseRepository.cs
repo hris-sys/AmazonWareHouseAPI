@@ -10,15 +10,15 @@ namespace Data.Services.Interfaces
     {
         IEnumerable<T> GetAll(Expression<Func<T, bool>> filter = null);
 
-        T GetById(Guid id);
+        T GetById(string id);
 
         void Insert(T entity);
 
         Task InsertAndSaveAsync(T entity);
 
-        void Remove(Guid id);
+        void Remove(string id);
 
-        Task RemoveAndSaveAsync(Guid id);
+        Task RemoveAndSaveAsync(string id);
 
         Task SaveChangesAsync();
 

@@ -26,6 +26,7 @@ namespace Data.Connection
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+            builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
 
         public override int SaveChanges(bool acceptAllChangesOnSuccess)

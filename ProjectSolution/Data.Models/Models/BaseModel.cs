@@ -9,10 +9,10 @@ namespace Data.Models.Models
     {
         public BaseModel()
         {
-            this.Id = Guid.NewGuid();
+            this.Id = Guid.NewGuid().ToString().Substring(0, 7);
         }
 
-        public Guid Id { get; set; }
+        public string Id { get; set; }
 
         [MaxLength(50)]
         [Required(ErrorMessage = "The name is required!")]
