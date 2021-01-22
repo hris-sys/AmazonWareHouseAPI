@@ -18,5 +18,7 @@ namespace Data.Models.Models
 
         public Item Item { get; set; }
         public string ItemId { get; set; }
+
+        public int ItemQuantity { get; set; }
     }
 }

@@ -39,5 +39,15 @@ namespace Data.Services.Classes
 
             await this.SaveChangesAsync();
         }
+
+        public static async Task UpdateQuantity(AmazonDbContext db, Item item, int quantity = 1)
+        {
+            Item itemToChangeQuantity = db.Items.FirstOrDefault(x => x.Id == item.Id);
+
+            ;
+            itemToChangeQuantity.Quantity -= quantity;
+
+            await db.SaveChangesAsync();
+        }
     }
 }
