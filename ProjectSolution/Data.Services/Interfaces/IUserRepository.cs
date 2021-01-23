@@ -14,7 +14,7 @@ namespace Data.Services.Interfaces
         //
         User GetUserByEmail(string email);
 
-        ICollection<Order> GetUserOrders(User user);
+        ICollection<Order> GetUserOrders(string userId);
 
         ICollection<User> GetAllUsersFromCity(string city);
     }

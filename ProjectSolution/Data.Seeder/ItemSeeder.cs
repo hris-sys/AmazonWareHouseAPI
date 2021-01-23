@@ -96,8 +96,7 @@ namespace Data.Seeder
                 {
                     Name = _names[i],
                     Price = _prices[i],
-                    Quantity = _quantity[i],
-                    CreatedAt = DateTime.UtcNow
+                    Quantity = _quantity[i]
                 });
             }
         }

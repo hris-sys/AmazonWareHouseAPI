@@ -11,7 +11,8 @@ namespace Data.Models.Models
         public Order()
         {
             this.OrderItems = new HashSet<OrderItem>();
-            this.TotalCost = 0m;
+            this.CreatedAt = DateTime.UtcNow;
+
         }
 
         [Required]
@@ -20,7 +21,7 @@ namespace Data.Models.Models
         [MaxLength(50)]
         public string Remarks { get; set; }
 
-        public decimal? TotalCost { get; set; }
+        public decimal TotalCost { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

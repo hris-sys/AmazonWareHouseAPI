@@ -93,3 +93,6 @@ D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWo
 D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\TestConsole\obj\Debug\netcoreapp3.1\TestConsole.genruntimeconfig.cache
 D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\TestConsole\bin\Debug\netcoreapp3.1\Data.Services.dll
 D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\TestConsole\bin\Debug\netcoreapp3.1\Data.Services.pdb
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\TestConsole\bin\Debug\netcoreapp3.1\AutoMapper.dll
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\TestConsole\bin\Debug\netcoreapp3.1\AmazonWareHouse.Business.dll
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\TestConsole\bin\Debug\netcoreapp3.1\AmazonWareHouse.Business.pdb

@@ -4,6 +4,73 @@
     "D:\\Hristiyan\\ВТУ\\2-ри курс\\1-ви семестър\\API\\Project\\CourseWork\\AmazonWareHouseAPI\\ProjectSolution\\TestConsole\\TestConsole.csproj": {}
   },
   "projects": {
+    "D:\\Hristiyan\\ВТУ\\2-ри курс\\1-ви семестър\\API\\Project\\CourseWork\\AmazonWareHouseAPI\\ProjectSolution\\AmazonWareHouse.Business\\AmazonWareHouse.Business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Hristiyan\\ВТУ\\2-ри курс\\1-ви семестър\\API\\Project\\CourseWork\\AmazonWareHouseAPI\\ProjectSolution\\AmazonWareHouse.Business\\AmazonWareHouse.Business.csproj",
+        "projectName": "AmazonWareHouse.Business",
+        "projectPath": "D:\\Hristiyan\\ВТУ\\2-ри курс\\1-ви семестър\\API\\Project\\CourseWork\\AmazonWareHouseAPI\\ProjectSolution\\AmazonWareHouse.Business\\AmazonWareHouse.Business.csproj",
+        "packagesPath": "C:\\Users\\Hristiyan\\.nuget\\packages\\",
+        "outputPath": "D:\\Hristiyan\\ВТУ\\2-ри курс\\1-ви семестър\\API\\Project\\CourseWork\\AmazonWareHouseAPI\\ProjectSolution\\AmazonWareHouse.Business\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Hristiyan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\Hristiyan\\ВТУ\\2-ри курс\\1-ви семестър\\API\\Project\\CourseWork\\AmazonWareHouseAPI\\ProjectSolution\\Data.Models\\Data.Models.csproj": {
+                "projectPath": "D:\\Hristiyan\\ВТУ\\2-ри курс\\1-ви семестър\\API\\Project\\CourseWork\\AmazonWareHouseAPI\\ProjectSolution\\Data.Models\\Data.Models.csproj"
+              },
+              "D:\\Hristiyan\\ВТУ\\2-ри курс\\1-ви семестър\\API\\Project\\CourseWork\\AmazonWareHouseAPI\\ProjectSolution\\Data.Services\\Data.Services.csproj": {
+                "projectPath": "D:\\Hristiyan\\ВТУ\\2-ри курс\\1-ви семестър\\API\\Project\\CourseWork\\AmazonWareHouseAPI\\ProjectSolution\\Data.Services\\Data.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "D:\\Hristiyan\\ВТУ\\2-ри курс\\1-ви семестър\\API\\Project\\CourseWork\\AmazonWareHouseAPI\\ProjectSolution\\Data.Connection\\Data.Connection.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -237,6 +304,9 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
+              "D:\\Hristiyan\\ВТУ\\2-ри курс\\1-ви семестър\\API\\Project\\CourseWork\\AmazonWareHouseAPI\\ProjectSolution\\AmazonWareHouse.Business\\AmazonWareHouse.Business.csproj": {
+                "projectPath": "D:\\Hristiyan\\ВТУ\\2-ри курс\\1-ви семестър\\API\\Project\\CourseWork\\AmazonWareHouseAPI\\ProjectSolution\\AmazonWareHouse.Business\\AmazonWareHouse.Business.csproj"
+              },
               "D:\\Hristiyan\\ВТУ\\2-ри курс\\1-ви семестър\\API\\Project\\CourseWork\\AmazonWareHouseAPI\\ProjectSolution\\Data.Connection\\Data.Connection.csproj": {
                 "projectPath": "D:\\Hristiyan\\ВТУ\\2-ри курс\\1-ви семестър\\API\\Project\\CourseWork\\AmazonWareHouseAPI\\ProjectSolution\\Data.Connection\\Data.Connection.csproj"
               },

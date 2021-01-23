@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AmazonWareHouse.Business\AmazonWareHouse.Business.csproj" />
     <ProjectReference Include="..\Data.Connection\Data.Connection.csproj" />
     <ProjectReference Include="..\Data.Services\Data.Services.csproj" />
   </ItemGroup>

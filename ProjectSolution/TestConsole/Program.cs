@@ -5,24 +5,22 @@ using System;
 using System.Threading.Tasks;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using AmazonWareHouse.Business.Services;
 
 namespace TestConsole
 {
     public class Program
     {
-        static async Task Main(string[] args)
+        static void Main(string[] args)
         {
 
             var db = new AmazonDbContext();
             //var itemRepo = new ItemRepository(db);
             //var list = db.Items.Include(x => x.ItemCategories).ToList();
-            
+            var userRepo = new UserRepository(db);
 
-            var orderRepo = new OrderRepository(db);
-
-            string orderId = "267824c";
-
-            await orderRepo.UpdateStatus(orderId, Data.Models.Common.OrderStatus.Confirmed);
+            var orders = userRepo.GetUserOrders("40394a6");
+            ;
         }
     }
 }

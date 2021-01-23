@@ -9,7 +9,7 @@ namespace Data.Services.Classes
 {
     public class UserRepository : BaseRepository<User>, IUserRepository
     {
-        public UserRepository(AmazonDbContext context) : base (context)
+        public UserRepository(AmazonDbContext context) : base(context)
         {
 
         }
@@ -28,10 +28,9 @@ namespace Data.Services.Classes
             return result;
         }
 
-        public ICollection<Order> GetUserOrders(User user)
+        public ICollection<Order> GetUserOrders(string userId)
         {
-            return this.Context.Orders.Include(x => x.User).Where(x => x.UserId == user.Id && x.IsDeleted == false).ToList();
-
+            return this.Context.Orders.Include(x => x.User).Include(x => x.City).Where(x => x.UserId == userId && x.IsDeleted == false).ToList();
             //Include -> from-to
             //Then Include -> inner from-to
         }

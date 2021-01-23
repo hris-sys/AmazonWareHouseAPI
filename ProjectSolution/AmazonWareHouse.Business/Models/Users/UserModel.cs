@@ -10,7 +10,7 @@ namespace AmazonWareHouse.Business.Models.Users
     {
         public UserModel()
         {
-            this.Orders = new HashSet<Order>();
+            this.Orders = new HashSet<Data.Models.Models.Order>();
         }
         
         [Required]
@@ -23,7 +23,7 @@ namespace AmazonWareHouse.Business.Models.Users
 
         public bool IsAdmin { get; set; }
 
-        public ICollection<Order> Orders { get; set; }
+        public ICollection<Data.Models.Models.Order> Orders { get; set; }
 
         public City City { get; set; }
 

@@ -792,6 +792,18 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "Swashbuckle.AspNetCore.SwaggerUI/5.6.3": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "System.Buffers/4.5.0": {
         "type": "package",
         "compile": {
@@ -1790,6 +1802,21 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "AmazonWareHouse.Business/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "AutoMapper": "10.1.1",
+          "Data.Models": "1.0.0",
+          "Data.Services": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/AmazonWareHouse.Business.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AmazonWareHouse.Business.dll": {}
+        }
+      },
       "Data.Connection/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -1818,6 +1845,20 @@
         },
         "runtime": {
           "bin/placeholder/Data.Models.dll": {}
+        }
+      },
+      "Data.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Data.Connection": "1.0.0",
+          "Data.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Data.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Data.Services.dll": {}
         }
       }
     }
@@ -2900,6 +2941,23 @@
         "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
         "swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggergen.nuspec"
+      ]
+    },
+    "Swashbuckle.AspNetCore.SwaggerUI/5.6.3": {
+      "sha512": "BPvcPxQRMsYZ3HnYmGKRWDwX4Wo29WHh14Q6B10BB8Yfbbcza+agOC2UrBFA1EuaZuOsFLbp6E2+mqVNF/Je8A==",
+      "type": "package",
+      "path": "swashbuckle.aspnetcore.swaggerui/5.6.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.dll",
+        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.pdb",
+        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.dll",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.pdb",
+        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
+        "swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
+        "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
     },
     "System.Buffers/4.5.0": {
@@ -6242,6 +6300,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "AmazonWareHouse.Business/1.0.0": {
+      "type": "project",
+      "path": "../AmazonWareHouse.Business/AmazonWareHouse.Business.csproj",
+      "msbuildProject": "../AmazonWareHouse.Business/AmazonWareHouse.Business.csproj"
+    },
     "Data.Connection/1.0.0": {
       "type": "project",
       "path": "../Data.Connection/Data.Connection.csproj",
@@ -6251,14 +6314,21 @@
       "type": "project",
       "path": "../Data.Models/Data.Models.csproj",
       "msbuildProject": "../Data.Models/Data.Models.csproj"
+    },
+    "Data.Services/1.0.0": {
+      "type": "project",
+      "path": "../Data.Services/Data.Services.csproj",
+      "msbuildProject": "../Data.Services/Data.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "AmazonWareHouse.Business >= 1.0.0",
       "AutoMapper >= 10.1.1",
       "Data.Connection >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 5.0.2",
-      "Swashbuckle.AspNetCore.SwaggerGen >= 5.6.3"
+      "Swashbuckle.AspNetCore.SwaggerGen >= 5.6.3",
+      "Swashbuckle.AspNetCore.SwaggerUI >= 5.6.3"
     ]
   },
   "packageFolders": {
@@ -6288,6 +6358,9 @@
         "net5.0": {
           "targetAlias": "netcoreapp5.0",
           "projectReferences": {
+            "D:\\Hristiyan\\ВТУ\\2-ри курс\\1-ви семестър\\API\\Project\\CourseWork\\AmazonWareHouseAPI\\ProjectSolution\\AmazonWareHouse.Business\\AmazonWareHouse.Business.csproj": {
+              "projectPath": "D:\\Hristiyan\\ВТУ\\2-ри курс\\1-ви семестър\\API\\Project\\CourseWork\\AmazonWareHouseAPI\\ProjectSolution\\AmazonWareHouse.Business\\AmazonWareHouse.Business.csproj"
+            },
             "D:\\Hristiyan\\ВТУ\\2-ри курс\\1-ви семестър\\API\\Project\\CourseWork\\AmazonWareHouseAPI\\ProjectSolution\\Data.Connection\\Data.Connection.csproj": {
               "projectPath": "D:\\Hristiyan\\ВТУ\\2-ри курс\\1-ви семестър\\API\\Project\\CourseWork\\AmazonWareHouseAPI\\ProjectSolution\\Data.Connection\\Data.Connection.csproj"
             }
@@ -6313,6 +6386,10 @@
             "version": "[5.0.2, )"
           },
           "Swashbuckle.AspNetCore.SwaggerGen": {
+            "target": "Package",
+            "version": "[5.6.3, )"
+          },
+          "Swashbuckle.AspNetCore.SwaggerUI": {
             "target": "Package",
             "version": "[5.6.3, )"
           }

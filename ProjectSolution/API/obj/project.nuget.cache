@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "2mNznYFHHxS9cge2+T93nve+1f+CJ2fzw6n/yMlBuMGzpoUvV3moYZ26maCiuBGBKUXUQaSiITnWyxRKehLOQw==",
+  "dgSpecHash": "MCkxiyC++Eu/I9wDqdv05VGbs89NMNVimO19gwO1a3r5MeAjS6DWwnrPZO8jf5nntGZkBbnLiJOtP+6oJTB7lA==",
   "success": true,
   "projectFilePath": "D:\\Hristiyan\\ВТУ\\2-ри курс\\1-ви семестър\\API\\Project\\CourseWork\\AmazonWareHouseAPI\\ProjectSolution\\API\\API.csproj",
   "expectedPackageFiles": [
@@ -61,6 +61,7 @@
     "C:\\Users\\Hristiyan\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\Hristiyan\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
     "C:\\Users\\Hristiyan\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\Hristiyan\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512",
     "C:\\Users\\Hristiyan\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\Hristiyan\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\Hristiyan\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",
