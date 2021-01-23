@@ -16,7 +16,7 @@ namespace Data.Services.Classes
 
         public ICollection<User> GetAllUsersFromCity(string city)
         {
-            var results = DbSet.Where(u => u.City.Name.ToLower() == city.ToLower()).ToList();
+            var results = DbSet.Include(x => x.City).Where(u => u.City.Name.ToLower() == city.ToLower()).ToList();
 
             return results;
         }
@@ -28,9 +28,10 @@ namespace Data.Services.Classes
             return result;
         }
 
-        public ICollection<User> GetUserOrders()
+        public ICollection<Order> GetUserOrders(User user)
         {
-            return DbSet.Include(u => u.Orders).ToList();
+            return this.Context.Orders.Include(x => x.User).Where(x => x.UserId == user.Id && x.IsDeleted == false).ToList();
+
             //Include -> from-to
             //Then Include -> inner from-to
         }

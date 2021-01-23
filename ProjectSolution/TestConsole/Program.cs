@@ -20,11 +20,9 @@ namespace TestConsole
 
             var orderRepo = new OrderRepository(db);
 
-            //Should find by Id instead
-            var order = db.Orders.Include(x => x.User).FirstOrDefault(u => u.User.Name == "Ivan");
-            var item = db.Items.FirstOrDefault(u => u.Name == "Plant");
+            string orderId = "267824c";
 
-            await orderRepo.AddItemToOrderAsync(order, item, 2);
+            await orderRepo.UpdateStatus(orderId, Data.Models.Common.OrderStatus.Confirmed);
         }
     }
 }

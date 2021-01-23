@@ -85,17 +85,17 @@ namespace API
                 });
             });
 
-            services.AddSingleton(
-                new MapperConfiguration(mc =>
-                {
-                    mc.AddProfile(new MappingProfile());
-                }).CreateMapper());
+            //services.AddSingleton(
+            //    new MapperConfiguration(mc =>
+            //    {
+            //        mc.AddProfile(new MappingProfile());
+            //    }).CreateMapper());
 
-            services.AddScoped<IBookRepository, BookRepository>();
-            services.AddScoped<IUserRepository, UserRepository>();
-            services.AddScoped<IUserService, UserService>();
-            services.AddScoped<IBookService, BookService>();
-            services.AddScoped<IAuthService, AuthService>();
+            //services.AddScoped<IBookRepository, BookRepository>();
+            //services.AddScoped<IUserRepository, UserRepository>();
+            //services.AddScoped<IUserService, UserService>();
+            //services.AddScoped<IBookService, BookService>();
+            //services.AddScoped<IAuthService, AuthService>();
 
             services.AddRouting(options => options.LowercaseUrls = true);
         }

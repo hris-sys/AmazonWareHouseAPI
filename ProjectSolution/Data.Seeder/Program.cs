@@ -48,8 +48,6 @@ namespace Data.Seeder
         {
             var cityRepo = new CityRepository(db);
 
-            var currCities = cities;
-
             foreach (var city in cities)
             {
                 cityRepo.Insert(city);

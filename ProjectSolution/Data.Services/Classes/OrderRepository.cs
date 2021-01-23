@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Data.Models.Common;
 
 namespace Data.Services.Classes
 {
@@ -33,7 +34,6 @@ namespace Data.Services.Classes
 
         public async Task AddItemToOrderAsync(Order order, Item item, int quantity = 1)
         {
-            //ToDo: Add When another same item is added on the same order to just update the quantity: Done
 
             var res = this.Context.OrdersItems.FirstOrDefault(x => x.OrderId == order.Id);
 
@@ -43,7 +43,7 @@ namespace Data.Services.Classes
                 {
                     res.ItemQuantity += quantity;
                     order.TotalCost += item.Price * quantity;
-                    await ItemRepository.UpdateQuantityAndSaveAsync(this.Context, item, Common.UpdateQuantityMeasure.Remove, quantity); 
+                    await ItemRepository.UpdateQuantityAndSaveAsync(this.Context, item, Common.UpdateQuantityMeasure.Remove, quantity);
                     await this.Context.SaveChangesAsync();
                     return;
                 }
@@ -84,7 +84,7 @@ namespace Data.Services.Classes
             }
         }
 
-        public async Task RemoveItemFromOrderAsync(Order order, Item item,int quantity = 1)
+        public async Task RemoveItemFromOrderAsync(Order order, Item item, int quantity = 1)
         {
             var orderItemRes = this.Context.OrdersItems.FirstOrDefault(x => x.OrderId == order.Id);
 
@@ -107,6 +107,47 @@ namespace Data.Services.Classes
             {
                 throw new ArgumentNullException("There is no such order!");
             }
+        }
+
+        public async Task FinalyzeOrder(Order order, User user)
+        {
+            var foundOrder = this.DbSet.FirstOrDefault(x => x.Id == order.Id);
+
+            if (!(foundOrder is null))
+            {
+                if (foundOrder.UserId == user.Id)
+                {
+                    foundOrder.Status = Models.Common.OrderStatus.Received;
+                    foundOrder.DeletedAt = DateTime.UtcNow;
+                    foundOrder.IsDeleted = true;
+                }
+                else
+                {
+                    throw new NullReferenceException("This user doesn't have any orders!");
+                }
+            }
+            else
+            {
+                throw new NullReferenceException("This order doesn't exist!");
+            }
+
+            await this.Context.SaveChangesAsync();
+        }
+
+        public async Task UpdateStatus(string orderId, OrderStatus orderStatus)
+        {
+            var foundOrder = this.DbSet.FirstOrDefault(x => x.Id == orderId);
+
+            if (!(foundOrder is null))
+            {
+                foundOrder.Status = orderStatus;
+            }
+            else
+            {
+                throw new NullReferenceException("There is no such order!");
+            }
+
+            await this.Context.SaveChangesAsync();
         }
     }
 }

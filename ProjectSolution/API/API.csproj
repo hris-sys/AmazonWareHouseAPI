@@ -14,5 +14,9 @@
     <ProjectReference Include="..\Data.Connection\Data.Connection.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
 
 </Project>
