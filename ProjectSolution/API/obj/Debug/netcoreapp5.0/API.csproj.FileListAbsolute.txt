@@ -1,0 +1,7 @@
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\API\obj\Debug\netcoreapp5.0\API.csprojAssemblyReference.cache
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\API\obj\Debug\netcoreapp5.0\API.GeneratedMSBuildEditorConfig.editorconfig
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\API\obj\Debug\netcoreapp5.0\API.AssemblyInfoInputs.cache
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\API\obj\Debug\netcoreapp5.0\API.AssemblyInfo.cs
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\API\obj\Debug\netcoreapp5.0\API.csproj.CoreCompileInputs.cache
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\API\obj\Debug\netcoreapp5.0\API.MvcApplicationPartsAssemblyInfo.cs
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\API\obj\Debug\netcoreapp5.0\API.MvcApplicationPartsAssemblyInfo.cache

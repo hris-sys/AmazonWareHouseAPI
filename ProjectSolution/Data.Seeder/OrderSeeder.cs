@@ -7,7 +7,5 @@ namespace Data.Seeder
 {
     public class OrderSeeder
     {
-        private OrderStatus[] _orderStatuses;
-        
     }
 }

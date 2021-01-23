@@ -1,5 +1,6 @@
 ﻿using Data.Connection;
 using Data.Models.Models;
+using Data.Services.Common;
 using Data.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -26,9 +27,6 @@ namespace Data.Services.Classes
             };
 
             this.Context.ItemsCategories.Add(itemCategory);
-
-            item.ItemCategories.Add(itemCategory);
-            //category.ItemCategories.Add(itemCategory);
         }
 
         public async Task RemoveCategory(Item item, Category category)
@@ -40,13 +38,19 @@ namespace Data.Services.Classes
             await this.SaveChangesAsync();
         }
 
-        public static async Task UpdateQuantity(AmazonDbContext db, Item item, int quantity = 1)
+        public static async Task UpdateQuantityAndSaveAsync(AmazonDbContext db, Item item, UpdateQuantityMeasure way, int quantity = 1)
         {
             Item itemToChangeQuantity = db.Items.FirstOrDefault(x => x.Id == item.Id);
 
-            ;
-            itemToChangeQuantity.Quantity -= quantity;
-
+            if (way == 0)
+            {
+                itemToChangeQuantity.Quantity += quantity;
+            }
+            else
+            {
+                itemToChangeQuantity.Quantity -= quantity;
+            }
+            
             await db.SaveChangesAsync();
         }
     }

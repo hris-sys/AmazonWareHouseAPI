@@ -7,11 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.Models", "Data.Models\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.Connection", "Data.Connection\Data.Connection.csproj", "{0C394EAB-1192-416C-AB4C-EDA9925B9156}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\TestConsole.csproj", "{D15E5FB6-8EE4-467F-A8F5-558177BDA6F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestConsole", "TestConsole\TestConsole.csproj", "{D15E5FB6-8EE4-467F-A8F5-558177BDA6F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data.Services", "Data.Services\Data.Services.csproj", "{BF278C5D-274B-4EC3-82B5-AE48EBF45032}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.Services", "Data.Services\Data.Services.csproj", "{BF278C5D-274B-4EC3-82B5-AE48EBF45032}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data.Seeder", "Data.Seeder\Data.Seeder.csproj", "{B440C878-0761-4C22-A59E-B973C132FA70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data.Seeder", "Data.Seeder\Data.Seeder.csproj", "{B440C878-0761-4C22-A59E-B973C132FA70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{42E2BBE9-1771-45F7-AC4E-2EAED497F30D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmazonWareHouse.Business", "AmazonWareHouse.Business\AmazonWareHouse.Business.csproj", "{00A35776-C6A2-4C76-92C1-6ACA893E2607}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{B440C878-0761-4C22-A59E-B973C132FA70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B440C878-0761-4C22-A59E-B973C132FA70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B440C878-0761-4C22-A59E-B973C132FA70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42E2BBE9-1771-45F7-AC4E-2EAED497F30D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42E2BBE9-1771-45F7-AC4E-2EAED497F30D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42E2BBE9-1771-45F7-AC4E-2EAED497F30D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42E2BBE9-1771-45F7-AC4E-2EAED497F30D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00A35776-C6A2-4C76-92C1-6ACA893E2607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00A35776-C6A2-4C76-92C1-6ACA893E2607}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00A35776-C6A2-4C76-92C1-6ACA893E2607}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00A35776-C6A2-4C76-92C1-6ACA893E2607}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
