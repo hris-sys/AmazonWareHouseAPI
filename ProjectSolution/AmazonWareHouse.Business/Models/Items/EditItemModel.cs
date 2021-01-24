@@ -14,6 +14,7 @@ namespace AmazonWareHouse.Business.Models.Items
         [Required]
         public int Quantity { get; set; }
 
+        //UTC now in ctor
         public DateTime? ModifiedAt { get; set; }
 
         public DateTime? DeletedAt { get; set; }

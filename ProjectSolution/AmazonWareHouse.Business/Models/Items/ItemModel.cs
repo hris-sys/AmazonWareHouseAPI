@@ -10,8 +10,8 @@ namespace AmazonWareHouse.Business.Models.Items
     {
         public ItemModel()
         {
-            this.OrderItems = new HashSet<OrderItem>();
-            this.ItemCategories = new HashSet<ItemCategory>();
+            this.OrderItemsIds = new List<string>();
+            this.ItemCategoriesIds = new List<string>();
         }
 
         [Required(ErrorMessage = "The item price is required!")]
@@ -25,12 +25,10 @@ namespace AmazonWareHouse.Business.Models.Items
 
         public DateTime CreatedAt { get; set; }
 
-        public DateTime? ModifiedAt { get; set; }
+        public List<string> OrderItemsIds { get; set; }
 
-        public DateTime? DeletedAt { get; set; }
+        public List<string> ItemCategoriesIds { get; set; }
 
-        public ICollection<OrderItem> OrderItems { get; set; }
-
-        public ICollection<ItemCategory> ItemCategories { get; set; }
+        public string CategoryName { get; set; }
     }
 }

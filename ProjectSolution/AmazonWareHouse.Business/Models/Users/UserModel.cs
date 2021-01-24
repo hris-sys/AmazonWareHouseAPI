@@ -1,4 +1,7 @@
-﻿using Data.Models.Models;
+﻿using AmazonWareHouse.Business.Models.Cities;
+using AmazonWareHouse.Business.Models.Order;
+using Data.Models.Common;
+using Data.Models.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -10,7 +13,7 @@ namespace AmazonWareHouse.Business.Models.Users
     {
         public UserModel()
         {
-            this.Orders = new HashSet<Data.Models.Models.Order>();
+            this.Orders = new HashSet<OrderModel>();
         }
         
         [Required]
@@ -21,11 +24,11 @@ namespace AmazonWareHouse.Business.Models.Users
         [Required]
         public string Name { get; set; }
 
-        public bool IsAdmin { get; set; }
+        public UserRoles Role { get; set; }
 
-        public ICollection<Data.Models.Models.Order> Orders { get; set; }
+        public ICollection<OrderModel> Orders { get; set; }
 
-        public City City { get; set; }
+        public CityModel City { get; set; }
 
         public string CityId { get; set; }
     }

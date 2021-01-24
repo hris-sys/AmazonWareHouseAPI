@@ -14,12 +14,12 @@ namespace TestConsole
         static void Main(string[] args)
         {
 
-            var db = new AmazonDbContext();
+            //var db = new AmazonDbContext();
             //var itemRepo = new ItemRepository(db);
             //var list = db.Items.Include(x => x.ItemCategories).ToList();
-            var userRepo = new UserRepository(db);
+            //var userRepo = new UserRepository(db);
 
-            var orders = userRepo.GetUserOrders("40394a6");
+            //var orders = userRepo.GetUserOrders("40394a6");
             ;
         }
     }

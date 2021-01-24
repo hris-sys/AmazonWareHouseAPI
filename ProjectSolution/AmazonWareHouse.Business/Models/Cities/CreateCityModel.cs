@@ -10,5 +10,7 @@ namespace AmazonWareHouse.Business.Models.Cities
         [Required]
         [MaxLength(50)]
         public string Name { get; set; }
+
+        public string PostalCode { get; set; }
     }
 }

@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Data.Connection.Migrations
 {
     [DbContext(typeof(AmazonDbContext))]
-    [Migration("20210122162349_Initial")]
-    partial class Initial
+    [Migration("20210124202455_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -25,6 +25,9 @@ namespace Data.Connection.Migrations
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -40,6 +43,9 @@ namespace Data.Connection.Migrations
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -65,6 +71,9 @@ namespace Data.Connection.Migrations
 
                     b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<DateTime?>("ModifiedAt")
                         .HasColumnType("datetime2");
@@ -137,7 +146,7 @@ namespace Data.Connection.Migrations
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
-                    b.Property<decimal?>("TotalCost")
+                    b.Property<decimal>("TotalCost")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("UserId")
@@ -159,6 +168,9 @@ namespace Data.Connection.Migrations
 
                     b.Property<string>("ItemId")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("ItemQuantity")
+                        .HasColumnType("int");
 
                     b.Property<string>("OrderId")
                         .HasColumnType("nvarchar(450)");
@@ -186,6 +198,9 @@ namespace Data.Connection.Migrations
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .IsRequired()

@@ -1,5 +1,10 @@
+using AmazonWareHouse.Business.Services;
+using AmazonWareHouse.Business.Services.Interfaces;
+using API.Infrastructure;
 using AutoMapper;
 using Data.Connection;
+using Data.Services.Classes;
+using Data.Services.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -85,17 +90,25 @@ namespace API
                 });
             });
 
-            //services.AddSingleton(
-            //    new MapperConfiguration(mc =>
-            //    {
-            //        mc.AddProfile(new MappingProfile());
-            //    }).CreateMapper());
+            services.AddSingleton(
+                new MapperConfiguration(mc =>
+                {
+                    mc.AddProfile(new MappingProfile());
+                }).CreateMapper());
 
-            //services.AddScoped<IBookRepository, BookRepository>();
-            //services.AddScoped<IUserRepository, UserRepository>();
-            //services.AddScoped<IUserService, UserService>();
-            //services.AddScoped<IBookService, BookService>();
-            //services.AddScoped<IAuthService, AuthService>();
+            //Add Service with Transcient
+            services.AddTransient(typeof(IAuthService), typeof(AuthService));
+            services.AddTransient(typeof(ICategoryService), typeof(CategoryService));
+            services.AddTransient(typeof(ICityService), typeof(CityService));
+            services.AddTransient(typeof(IItemService), typeof(ItemService));
+            services.AddTransient(typeof(IOrderService), typeof(OrderService));
+            services.AddTransient(typeof(IUserService), typeof(UserService));
+
+            services.AddTransient<ICategoryRepository, CategoryRepository>();
+            services.AddTransient<IItemRepository, ItemRepository>();
+            services.AddTransient<ICityRepository, CityRepository>();
+            services.AddTransient<IOrderRepository, OrderRepository>();
+            services.AddTransient<IUserRepository, UserRepository>();
 
             services.AddRouting(options => options.LowercaseUrls = true);
         }

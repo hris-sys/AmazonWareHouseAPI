@@ -1,6 +1,7 @@
 ﻿using AmazonWareHouse.Business.Models.Categories;
 using AmazonWareHouse.Business.Models.Items;
 using Data.Connection;
+using Data.Models.Models;
 using Data.Services.Common;
 using System;
 using System.Collections.Generic;
@@ -27,5 +28,7 @@ namespace AmazonWareHouse.Business.Services.Interfaces
         Task UpdateQuantityAndSaveAsync(AmazonDbContext db, string itemId, UpdateQuantityMeasure way, int quantity = 1);
 
         void AddCategory(ItemModel item, CategoryModel category);
+
+        ItemModel GetByIdWithCategory(string itemId);
     }
 }

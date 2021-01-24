@@ -10,6 +10,11 @@ namespace Data.Connection
 {
     public class AmazonDbContext : DbContext
     {
+        public AmazonDbContext(DbContextOptions options) : base(options)
+        {
+
+        }
+
         public DbSet<Category> Categories { get; set; }
         public DbSet<City> Cities { get; set; }
         public DbSet<Item> Items { get; set; }

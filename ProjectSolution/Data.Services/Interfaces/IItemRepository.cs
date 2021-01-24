@@ -15,5 +15,7 @@ namespace Data.Services.Interfaces
 
         public Task RemoveCategory(Item item, string categoryId);
 
+        public Item GetByIdWithCategory(string itemId);
+
     }
 }

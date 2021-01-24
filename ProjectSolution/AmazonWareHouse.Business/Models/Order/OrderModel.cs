@@ -10,7 +10,6 @@ namespace AmazonWareHouse.Business.Models.Order
     {
         public OrderStatus Status { get; set; }
 
-
         public string Remarks { get; set; }
 
         public decimal TotalCost { get; set; }

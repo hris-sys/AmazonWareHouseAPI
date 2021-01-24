@@ -1,4 +1,5 @@
-﻿using Data.Models.Common;
+﻿using AmazonWareHouse.Business.Models.Cities;
+using Data.Models.Common;
 using Data.Models.Models;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,7 @@ namespace AmazonWareHouse.Business.Models.Order
         public DateTime? ModifiedAt { get; set; }
         public DateTime? DeletedAt { get; set; }
 
-        public City City { get; set; }
+        public CityModel City { get; set; }
 
         public string CityId { get; set; }
     }

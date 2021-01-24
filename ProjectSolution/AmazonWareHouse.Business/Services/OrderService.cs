@@ -25,8 +25,6 @@ namespace AmazonWareHouse.Business.Services
             this._orderRepository = orderRepository;
             _mapper = mapper;
         }
-
-        //Finish the implementation
         public async Task AddItemToOrderAsyncAndSaveAsync(OrderModel order, ItemModel item, int quantity = 1)
         {
             var orderEntity = this._mapper.Map<Order>(order);

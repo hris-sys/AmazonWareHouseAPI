@@ -1,4 +1,5 @@
-﻿using AmazonWareHouse.Business.Models.Order;
+﻿using AmazonWareHouse.Business.Models.Cities;
+using AmazonWareHouse.Business.Models.Order;
 using AmazonWareHouse.Business.Models.Users;
 using AmazonWareHouse.Business.Services.Interfaces;
 using AutoMapper;
@@ -15,12 +16,14 @@ namespace AmazonWareHouse.Business.Services
     public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
+        private readonly ICityRepository _cityRepository;
         private readonly IMapper _mapper;
 
-        public UserService(IUserRepository userRepository, IMapper mapper)
+        public UserService(IUserRepository userRepository, IMapper mapper, ICityRepository cityRepository)
         {
-            _userRepository = userRepository;
-            _mapper = mapper;
+            this._userRepository = userRepository;
+            this._mapper = mapper;
+            this._cityRepository = cityRepository;
         }
 
         public bool DoesEmailExist(string email)
@@ -62,39 +65,42 @@ namespace AmazonWareHouse.Business.Services
             return _mapper.Map<UserAuthModel>(result);
         }
 
-        public List<OrderModel> GetUserOrders(string id)
+        public List<UserModel> GetUserOrders(string userId)
         {
-            var dbResults = this._userRepository.GetUserOrders(id);
-            var resultList = new List<OrderModel>();
+            var dbResults = this._userRepository.GetUserOrders(userId);
+            var resultList = new List<UserModel>();
 
             foreach (var result in dbResults)
             {
-                resultList.Add(_mapper.Map<OrderModel>(result));
+                resultList.Add(_mapper.Map<UserModel>(result));
             }
 
             return resultList;
         }
 
-        public async Task InsertAsync(CreateUserModel model)
+        public void Insert(CreateUserModel model)
         {
+            var city = this._cityRepository.FindByName(model.City.Name);
+
             var entity = _mapper.Map<User>(model);
 
-            //entity.Password = AuthService.HashPassword(entity.Password);
+            //Fix instead of adding a new city to add a current city
 
-            await _userRepository.InsertAndSaveAsync(entity);
+            entity.Password = AuthService.HashPassword(entity.Password);
+
+            _userRepository.CreateUser(entity, city);
         }
 
-        public async Task RemoveAsync(string id)
+        public void SetDeleted(string id)
         {
-            //Ask what will happen when deleted
-            await _userRepository.RemoveAndSaveAsync(id);
+            _userRepository.SetDeleted(id);
         }
 
         public async Task UpdateAsync(EditUserModel model)
         {
             var entity = _mapper.Map<User>(model);
 
-            //entity.Password = AuthService.HashPassword(entity.Password);
+            entity.Password = AuthService.HashPassword(entity.Password);
 
             await _userRepository.UpdateAndSaveAsync(entity);
         }

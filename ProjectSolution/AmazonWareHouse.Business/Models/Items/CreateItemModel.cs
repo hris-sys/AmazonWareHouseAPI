@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AmazonWareHouse.Business.Models.Items
 {
-    public class CreateItemModel : BaseModel
+    public class CreateItemModel
     {
         [Required]
         [MaxLength(50)]

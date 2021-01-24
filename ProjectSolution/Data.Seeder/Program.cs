@@ -12,10 +12,10 @@ namespace Data.Seeder
     {
         public static async Task Main()
         {
-            var db = new AmazonDbContext();
-            var items = db.Items.ToList();
+            //var db = new AmazonDbContext();
+            var items = new ItemSeeder().Items;
 
-            await FillItemCategories(db, items);
+            
         }
 
         public static async Task FillItems(AmazonDbContext db)

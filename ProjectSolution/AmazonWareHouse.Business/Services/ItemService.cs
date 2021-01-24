@@ -49,6 +49,13 @@ namespace AmazonWareHouse.Business.Services
             return _mapper.Map<ItemModel>(result);
         }
 
+        public ItemModel GetByIdWithCategory(string itemId)
+        {
+            var result = _itemRepository.GetByIdWithCategory(itemId);
+
+            return _mapper.Map<ItemModel>(result);
+        }
+
         public async Task InsertAsync(CreateItemModel model)
         {
             var entity = _mapper.Map<Item>(model);
@@ -58,6 +65,7 @@ namespace AmazonWareHouse.Business.Services
 
         public async Task RemoveAsync(string id)
         {
+            //Fix to become deleted true
             //Ask what will happen when deleted
             await _itemRepository.RemoveAndSaveAsync(id);
         }

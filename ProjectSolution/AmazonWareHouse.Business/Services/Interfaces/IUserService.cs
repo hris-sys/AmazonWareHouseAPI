@@ -14,13 +14,13 @@ namespace AmazonWareHouse.Business.Services.Interfaces
 
         UserModel GetById(string id);
 
-        Task InsertAsync(CreateUserModel model);
+        void SetDeleted(string userId);
 
-        Task RemoveAsync(string id);
+        void Insert(CreateUserModel model);
 
         Task UpdateAsync(EditUserModel model);
 
-        List<OrderModel> GetUserOrders(string id);
+        List<UserModel> GetUserOrders(string userId);
 
         List<UserModel> GetAllUsersFromCity(string cityId);
 

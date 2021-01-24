@@ -74,5 +74,17 @@ namespace Data.Services.Classes
                 await db.SaveChangesAsync();
             }
         }
+
+        public Item GetByIdWithCategory(string itemId)
+        {
+            var result = this.Context.Items.Include(x => x.ItemCategories).ThenInclude(ic => ic.Category).FirstOrDefault(i => i.Id == itemId);
+
+            if (result is null)
+            {
+                throw new NullReferenceException("No such city exists!");
+            }
+
+            return result;
+        }
     }
 }
