@@ -18,7 +18,7 @@ namespace Data.Services.Classes
 
         }
 
-        public void AddCategory(Item item, Category category)
+        public async Task AddCategoryAndSaveAsync(Item item, Category category)
         {
             var itemCategory = new ItemCategory()
             {
@@ -27,31 +27,52 @@ namespace Data.Services.Classes
             };
 
             this.Context.ItemsCategories.Add(itemCategory);
+            await this.Context.SaveChangesAsync();
         }
 
-        public async Task RemoveCategory(Item item, Category category)
+        public async Task RemoveCategory(Item item, string categoryId)
         {
-            var itemCater = item.ItemCategories.FirstOrDefault(c => c.CategoryId == category.Id);
-
-            this.Context.ItemsCategories.Remove(itemCater);
-
-            await this.SaveChangesAsync();
-        }
-
-        public static async Task UpdateQuantityAndSaveAsync(AmazonDbContext db, Item item, UpdateQuantityMeasure way, int quantity = 1)
-        {
-            Item itemToChangeQuantity = db.Items.FirstOrDefault(x => x.Id == item.Id);
-
-            if (way == 0)
+            if (this.Context.Items.FirstOrDefault(x => x.Id == item.Id) is null)
             {
-                itemToChangeQuantity.Quantity += quantity;
+                throw new NullReferenceException("Such item doesn't exist!");
             }
             else
             {
-                itemToChangeQuantity.Quantity -= quantity;
+                var itemCater = item.ItemCategories.FirstOrDefault(c => c.CategoryId == categoryId);
+                if (itemCater is null)
+                {
+                    throw new NullReferenceException("Such combination of item and category doesn't exist!");
+                }
+                else
+                {
+                    this.Context.ItemsCategories.Remove(itemCater);
+
+                    await this.SaveChangesAsync();
+                }
             }
-            
-            await db.SaveChangesAsync();
+        }
+
+        public static async Task UpdateQuantityAndSaveAsync(AmazonDbContext db, string itemId, UpdateQuantityMeasure way, int quantity = 1)
+        {
+            Item itemToChangeQuantity = db.Items.FirstOrDefault(x => x.Id == itemId);
+
+            if (itemToChangeQuantity is null)
+            {
+                throw new NullReferenceException("Such item doesn't exist!");
+            }
+            else
+            {
+                if (way == 0)
+                {
+                    itemToChangeQuantity.Quantity += quantity;
+                }
+                else
+                {
+                    itemToChangeQuantity.Quantity -= quantity;
+                }
+
+                await db.SaveChangesAsync();
+            }
         }
     }
 }

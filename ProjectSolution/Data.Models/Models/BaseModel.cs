@@ -17,5 +17,7 @@ namespace Data.Models.Models
         [MaxLength(50)]
         [Required(ErrorMessage = "The name is required!")]
         public string Name { get; set; }
+
+        public bool IsDeleted { get; set; }
     }
 }

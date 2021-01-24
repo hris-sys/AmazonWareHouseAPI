@@ -78,12 +78,12 @@ namespace Data.Seeder
 
             for (int i = 0; i < items.Count; i++)
             {
-                itemRepo.AddCategory(items[i], categories[random.Next(categories.Count)]);
+                await itemRepo.AddCategoryAndSaveAsync(items[i], categories[random.Next(categories.Count)]);
             }
 
             for (int i = 0; i < items.Count; i += 2)
             {
-                itemRepo.AddCategory(items[i], categories[random.Next(categories.Count)]);
+                await itemRepo.AddCategoryAndSaveAsync(items[i], categories[random.Next(categories.Count)]);
             }
 
             await itemRepo.SaveChangesAsync();

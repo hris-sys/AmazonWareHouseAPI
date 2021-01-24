@@ -2,6 +2,7 @@
 using Data.Models.Models;
 using Data.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -14,9 +15,14 @@ namespace Data.Services.Classes
 
         }
 
-        public ICollection<User> GetAllUsersFromCity(string city)
+        public ICollection<User> GetAllUsersFromCity(string cityId)
         {
-            var results = DbSet.Include(x => x.City).Where(u => u.City.Name.ToLower() == city.ToLower()).ToList();
+            if (this.Context.Cities.FirstOrDefault(x => x.Id == cityId) is null)
+            {
+                throw new NullReferenceException("There is no such city!");
+            }
+
+            var results = DbSet.Include(x => x.City).Where(u => u.City.Name.ToLower() == cityId.ToLower() && u.IsDeleted == false).ToList();
 
             return results;
         }
@@ -28,11 +34,10 @@ namespace Data.Services.Classes
             return result;
         }
 
-        public ICollection<Order> GetUserOrders(string userId)
+        public ICollection<User> GetUserOrders(string userId)
         {
-            return this.Context.Orders.Include(x => x.User).Include(x => x.City).Where(x => x.UserId == userId && x.IsDeleted == false).ToList();
-            //Include -> from-to
-            //Then Include -> inner from-to
+            //The list will return 0 if there are no such users or orders.
+            return this.Context.Users.Include(x => x.Orders).Include(x => x.City).Where(x => x.Id == userId && x.IsDeleted == false).ToList();
         }
     }
 }

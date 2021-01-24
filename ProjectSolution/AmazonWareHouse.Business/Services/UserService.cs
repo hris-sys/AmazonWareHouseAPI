@@ -32,12 +32,18 @@ namespace AmazonWareHouse.Business.Services
 
         public List<UserModel> GetAll(Expression<Func<UserModel, bool>> filter = null)
         {
-            throw new NotImplementedException();
+            var repoFilter = _mapper.Map<Expression<Func<User, bool>>>(filter);
+
+            var result = _userRepository.GetAll(repoFilter);
+
+            return _mapper.Map<List<UserModel>>(result);
         }
 
-        public List<UserModel> GetAllUsersFromCity(string city)
+        public List<UserModel> GetAllUsersFromCity(string cityId)
         {
-            throw new NotImplementedException();
+            var results = this._userRepository.GetAllUsersFromCity(cityId);
+
+            return this._mapper.Map<List<UserModel>>(results);
         }
 
 
@@ -80,6 +86,7 @@ namespace AmazonWareHouse.Business.Services
 
         public async Task RemoveAsync(string id)
         {
+            //Ask what will happen when deleted
             await _userRepository.RemoveAndSaveAsync(id);
         }
 

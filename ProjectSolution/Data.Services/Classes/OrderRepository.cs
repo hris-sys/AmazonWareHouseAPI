@@ -18,32 +18,39 @@ namespace Data.Services.Classes
 
         }
 
-        public async Task CreateOrder(User user, City city, string remarks = "No remarks")
+        public async Task CreateOrder(User user, string cityId, string remarks = "No remarks")
         {
-            var order = new Order()
+            if (this.Context.Cities.FirstOrDefault(x => x.Id == cityId) is null)
             {
-                Name = user.Name + "'s order",
-                User = user,
-                CityId = city.Id,
-                Remarks = remarks,
-                Status = Models.Common.OrderStatus.AwaitingApproval
-            };
+                throw new NullReferenceException("Such city doesn't exist!");
+            }
+            else
+            {
+                var order = new Order()
+                {
+                    Name = user.Name + "'s order",
+                    User = user,
+                    CityId = cityId,
+                    Remarks = remarks,
+                    Status = Models.Common.OrderStatus.AwaitingApproval
+                };
 
-            await this.InsertAndSaveAsync(order);
+                await this.InsertAndSaveAsync(order);
+            }
         }
 
-        public async Task AddItemToOrderAsync(Order order, Item item, int quantity = 1)
+        public async Task AddItemToOrderAsyncAndSaveAsync(Order order, Item item, int quantity = 1)
         {
 
-            var res = this.Context.OrdersItems.FirstOrDefault(x => x.OrderId == order.Id);
+            var orderRes = this.Context.OrdersItems.FirstOrDefault(x => x.OrderId == order.Id);
 
-            if (!(res is null))
+            if (!(orderRes is null))
             {
-                if (res.ItemId == item.Id)
+                if (orderRes.ItemId == item.Id)
                 {
-                    res.ItemQuantity += quantity;
+                    orderRes.ItemQuantity += quantity;
                     order.TotalCost += item.Price * quantity;
-                    await ItemRepository.UpdateQuantityAndSaveAsync(this.Context, item, Common.UpdateQuantityMeasure.Remove, quantity);
+                    await ItemRepository.UpdateQuantityAndSaveAsync(this.Context, item.Id, Common.UpdateQuantityMeasure.Remove, quantity);
                     await this.Context.SaveChangesAsync();
                     return;
                 }
@@ -58,7 +65,7 @@ namespace Data.Services.Classes
 
                     order.TotalCost += item.Price * quantity;
 
-                    await ItemRepository.UpdateQuantityAndSaveAsync(this.Context, item, Common.UpdateQuantityMeasure.Remove, quantity);
+                    await ItemRepository.UpdateQuantityAndSaveAsync(this.Context, item.Id, Common.UpdateQuantityMeasure.Remove, quantity);
 
                     this.Context.OrdersItems.Add(orderItem);
 
@@ -76,7 +83,7 @@ namespace Data.Services.Classes
 
                 order.TotalCost += item.Price * quantity;
 
-                await ItemRepository.UpdateQuantityAndSaveAsync(this.Context, item, Common.UpdateQuantityMeasure.Remove, quantity);
+                await ItemRepository.UpdateQuantityAndSaveAsync(this.Context, item.Id, Common.UpdateQuantityMeasure.Remove, quantity);
 
                 this.Context.OrdersItems.Add(orderItem);
 
@@ -94,7 +101,7 @@ namespace Data.Services.Classes
                 {
                     orderItemRes.ItemQuantity -= quantity;
                     order.TotalCost -= item.Price * quantity;
-                    await ItemRepository.UpdateQuantityAndSaveAsync(this.Context, item, Common.UpdateQuantityMeasure.Add, quantity);
+                    await ItemRepository.UpdateQuantityAndSaveAsync(this.Context, item.Id, Common.UpdateQuantityMeasure.Add, quantity);
                     await this.Context.SaveChangesAsync();
                     return;
                 }
@@ -109,17 +116,18 @@ namespace Data.Services.Classes
             }
         }
 
-        public async Task FinalyzeOrder(Order order, User user)
+        public async Task FinalyzeOrder(string orderId, string userId)
         {
-            var foundOrder = this.DbSet.FirstOrDefault(x => x.Id == order.Id);
+            var foundOrder = this.DbSet.FirstOrDefault(x => x.Id == orderId);
 
             if (!(foundOrder is null))
             {
-                if (foundOrder.UserId == user.Id)
+                if (foundOrder.UserId == userId)
                 {
                     foundOrder.Status = Models.Common.OrderStatus.Received;
                     foundOrder.DeletedAt = DateTime.UtcNow;
                     foundOrder.IsDeleted = true;
+                    await this.Context.SaveChangesAsync();
                 }
                 else
                 {
@@ -130,8 +138,6 @@ namespace Data.Services.Classes
             {
                 throw new NullReferenceException("This order doesn't exist!");
             }
-
-            await this.Context.SaveChangesAsync();
         }
 
         public async Task UpdateStatus(string orderId, OrderStatus orderStatus)
@@ -141,13 +147,13 @@ namespace Data.Services.Classes
             if (!(foundOrder is null))
             {
                 foundOrder.Status = orderStatus;
+                await this.Context.SaveChangesAsync();
+
             }
             else
             {
                 throw new NullReferenceException("There is no such order!");
             }
-
-            await this.Context.SaveChangesAsync();
         }
     }
 }

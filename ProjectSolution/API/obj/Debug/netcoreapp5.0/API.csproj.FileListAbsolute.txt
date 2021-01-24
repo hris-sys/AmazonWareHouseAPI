@@ -66,3 +66,8 @@ D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWo
 D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\API\obj\Debug\netcoreapp5.0\ref\API.dll
 D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\API\obj\Debug\netcoreapp5.0\API.pdb
 D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\API\obj\Debug\netcoreapp5.0\API.genruntimeconfig.cache
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\API\bin\Debug\netcoreapp5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\API\bin\Debug\netcoreapp5.0\AmazonWareHouse.Business.dll
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\API\bin\Debug\netcoreapp5.0\Data.Services.dll
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\API\bin\Debug\netcoreapp5.0\AmazonWareHouse.Business.pdb
+D:\Hristiyan\ВТУ\2-ри курс\1-ви семестър\API\Project\CourseWork\AmazonWareHouseAPI\ProjectSolution\API\bin\Debug\netcoreapp5.0\Data.Services.pdb

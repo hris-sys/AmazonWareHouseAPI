@@ -54,7 +54,7 @@ namespace Data.Services.Classes
             if (entity == null)
                 throw new ArgumentException();
 
-            DbSet.Remove(entity);
+            entity.IsDeleted = true;
         }
 
         public async Task RemoveAndSaveAsync(string id)

@@ -29,8 +29,6 @@ namespace Data.Models.Models
 
         public DateTime? DeletedAt { get; set; }
 
-        public bool IsDeleted { get; set; }
-
         public City City { get; set; }
         public string CityId { get; set; }
 

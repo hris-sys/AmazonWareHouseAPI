@@ -22,7 +22,7 @@ namespace AmazonWareHouse.Business.Services.Interfaces
 
         List<OrderModel> GetUserOrders(string id);
 
-        List<UserModel> GetAllUsersFromCity(string city);
+        List<UserModel> GetAllUsersFromCity(string cityId);
 
         UserAuthModel GetUserByEmail(string email);
 
