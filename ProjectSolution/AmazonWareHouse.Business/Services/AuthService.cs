@@ -77,15 +77,15 @@ namespace AmazonWareHouse.Business.Services
             var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
             var signinCredentials = new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256);
 
-            var tokeOptions = new JwtSecurityToken(
+            var tokenOptions = new JwtSecurityToken(
                issuer: _configuration["Jwt:Issuer"],
                audience: _configuration["Jwt:Issuer"],
                claims: claims,
-               expires: DateTime.Now.AddMinutes(30),
+               expires: DateTime.Now.AddMinutes(60),
                signingCredentials: signinCredentials
             );
 
-            var tokenString = new JwtSecurityTokenHandler().WriteToken(tokeOptions);
+            var tokenString = new JwtSecurityTokenHandler().WriteToken(tokenOptions);
 
             return Task.FromResult(tokenString);
         }

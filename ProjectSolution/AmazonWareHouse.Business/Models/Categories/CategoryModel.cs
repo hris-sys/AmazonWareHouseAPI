@@ -7,5 +7,7 @@ namespace AmazonWareHouse.Business.Models.Categories
     public class CategoryModel : BaseModel
     {
         public string Name { get; set; }
+
+        public bool IsDeleted { get; set; }
     }
 }

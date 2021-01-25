@@ -15,5 +15,7 @@ namespace AmazonWareHouse.Business.Models.Items
         public int Quantity { get; set; }
 
         public DateTime CreatedAt { get; set; }
+
+        public bool IsDeleted { get; set; }
     }
 }

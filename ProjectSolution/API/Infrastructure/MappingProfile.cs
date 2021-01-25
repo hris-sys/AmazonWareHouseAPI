@@ -18,6 +18,7 @@ namespace API.Infrastructure
             CreateMap<User, UserAuthModel>().ReverseMap();
 
             CreateMap<Category, CategoryModel>().ReverseMap();
+            CreateMap<Category, CreateCategoryModel>().ReverseMap();
             CreateMap<City, CityModel>().ReverseMap();
             CreateMap<City, CreateCityModel>().ReverseMap();
 

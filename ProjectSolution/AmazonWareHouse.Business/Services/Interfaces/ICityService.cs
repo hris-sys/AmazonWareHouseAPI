@@ -1,4 +1,5 @@
 ﻿using AmazonWareHouse.Business.Models.Cities;
+using Data.Models.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
@@ -18,5 +19,7 @@ namespace AmazonWareHouse.Business.Services.Interfaces
         void RemoveById(string cityId);
 
         Task UpdateAsync(EditCityModel model);
+
+        City GetByIdAndReturnCityObject(string cityId);
     }
 }

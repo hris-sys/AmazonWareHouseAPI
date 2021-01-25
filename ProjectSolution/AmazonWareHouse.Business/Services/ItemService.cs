@@ -65,9 +65,12 @@ namespace AmazonWareHouse.Business.Services
 
         public async Task RemoveAsync(string id)
         {
-            //Fix to become deleted true
-            //Ask what will happen when deleted
-            await _itemRepository.RemoveAndSaveAsync(id);
+            await RemoveById(id);
+        }
+
+        public async Task RemoveById(string itemId)
+        {
+            await this._itemRepository.RemoveById(itemId);
         }
 
         public async Task RemoveCategory(ItemModel item, string categoryId)

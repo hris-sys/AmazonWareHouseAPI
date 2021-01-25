@@ -13,18 +13,16 @@ namespace AmazonWareHouse.Business.Models.Order
         public CreateOrderModel()
         {
             this.OrderItemsIds = new List<string>();
-            this.Name = this.User.Name + "'s order";
+            //this.Name = this.User.Name + "'s order";
         }
 
         private string Name { get; set; }
 
-        public CityModel City { get; set; }
-        public string CityId { get; set; }
+        public OrderCityModel City { get; set; }
 
         public string Remarks { get; set; }
 
-        public UserModel User { get; set; }
-        public string UserId { get; set; }
+        public UserOrderModel User { get; set; }
 
         public DateTime CreatedAt { get; set; }
 

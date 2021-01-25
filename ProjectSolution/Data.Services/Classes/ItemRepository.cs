@@ -86,5 +86,19 @@ namespace Data.Services.Classes
 
             return result;
         }
+
+        public async Task RemoveById(string itemId)
+        {
+            var entity = this.DbSet.FirstOrDefault(x => x.Id == itemId);
+
+            if (entity is null)
+            {
+                throw new NullReferenceException("There is no such item!");
+            }
+
+            entity.IsDeleted = true;
+
+            await this.Context.SaveChangesAsync();
+        }
     }
 }

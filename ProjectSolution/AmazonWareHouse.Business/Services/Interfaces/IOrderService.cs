@@ -3,6 +3,7 @@ using AmazonWareHouse.Business.Models.Items;
 using AmazonWareHouse.Business.Models.Order;
 using AmazonWareHouse.Business.Models.Users;
 using Data.Models.Common;
+using Data.Models.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
@@ -17,7 +18,7 @@ namespace AmazonWareHouse.Business.Services.Interfaces
 
         OrderModel GetById(string id);
 
-        Task CreateAsync(UserModel user, string cityId, string remarks = "No remarks");
+        Task CreateAsync(User user, string cityId, string remarks = "No remarks");
 
         Task RemoveAsync(string orderId, string userId);
 

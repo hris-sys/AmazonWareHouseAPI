@@ -42,13 +42,28 @@ namespace API.Controllers
         [Authorize(Roles = UserRoleConstants.Admin)]
         public async Task<IActionResult> Post(CreateItemModel model)
         {
-            if (!(_itemService.GetAll().FirstOrDefault(u => u.Name == model.Name) is null))
+            if (!(_itemService.GetAll().FirstOrDefault(u => u.Name == model.Name && u.isDeleted == false) is null))
             {
                 return BadRequest("Item already exists!");
             }
             else
             {
                 await _itemService.InsertAsync(model);
+                return Ok();
+            }
+        }
+
+        [HttpDelete]
+        [Authorize(Roles = UserRoleConstants.Admin)]
+        public async Task<IActionResult> Delete(string itemId)
+        {
+            if (_itemService.GetAll().FirstOrDefault(u => u.Name == itemId && u.isDeleted == true) is not null)
+            {
+                return BadRequest("Item has already been deleted!");
+            }
+            else
+            {
+                await _itemService.RemoveAsync(itemId);
                 return Ok();
             }
         }

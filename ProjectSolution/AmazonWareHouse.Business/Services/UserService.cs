@@ -104,5 +104,17 @@ namespace AmazonWareHouse.Business.Services
 
             await _userRepository.UpdateAndSaveAsync(entity);
         }
+
+        public User GetUserAndReturnUserModel(string userId)
+        {
+            var userResult = this._userRepository.GetById(userId);
+
+            if (userResult is null)
+            {
+                throw new NullReferenceException("No such user!");
+            }
+
+            return userResult;
+        }
     }
 }

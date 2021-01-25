@@ -46,6 +46,18 @@ namespace AmazonWareHouse.Business.Services
             return _mapper.Map<CityModel>(result);
         }
 
+        public City GetByIdAndReturnCityObject(string cityId)
+        {
+            var result = this._cityRepository.GetById(cityId);
+
+            if (result is null)
+            {
+                throw new NullReferenceException("No such city!");
+            }
+
+            return result;
+        }
+
         public void RemoveById(string cityId)
         {
             _cityRepository.RemoveById(cityId);

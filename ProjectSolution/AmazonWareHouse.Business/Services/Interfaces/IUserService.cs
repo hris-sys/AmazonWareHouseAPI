@@ -1,5 +1,6 @@
 ﻿using AmazonWareHouse.Business.Models.Order;
 using AmazonWareHouse.Business.Models.Users;
+using Data.Models.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
@@ -27,5 +28,7 @@ namespace AmazonWareHouse.Business.Services.Interfaces
         UserAuthModel GetUserByEmail(string email);
 
         bool DoesEmailExist(string email);
+
+        User GetUserAndReturnUserModel(string userId);
     }
 }

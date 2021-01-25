@@ -30,5 +30,7 @@ namespace AmazonWareHouse.Business.Services.Interfaces
         void AddCategory(ItemModel item, CategoryModel category);
 
         ItemModel GetByIdWithCategory(string itemId);
+
+        Task RemoveById(string itemId);
     }
 }

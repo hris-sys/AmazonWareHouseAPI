@@ -33,11 +33,9 @@ namespace AmazonWareHouse.Business.Services
             await this._orderRepository.AddItemToOrderAsyncAndSaveAsync(orderEntity, itemEntity);
         }
 
-        public async Task CreateAsync(UserModel user, string cityId, string remarks = "No remarks")
+        public async Task CreateAsync(User user, string cityId, string remarks = "No remarks")
         {
-            var userEntity = this._mapper.Map<User>(user);
-
-            await this._orderRepository.CreateOrder(userEntity, cityId, remarks);
+            await this._orderRepository.CreateOrder(user, cityId, remarks);
         }
 
         public async Task FinalyzeOrder(string orderId, string userId)
