@@ -9,6 +9,7 @@ namespace AmazonWareHouse.Business.Models.Categories
     {
 
         [Required]
+        [MaxLength(50)]
         public string Name { get; set; }
 
         private bool isDeleted { get; set; }

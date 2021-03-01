@@ -13,5 +13,8 @@ namespace AmazonWareHouse.Business.Models.Cities
         public string Name { get; set; }
 
         public bool IsDeleted { get; set; }
+
+        [MaxLength(10)]
+        public string PostalCode { get; set; }
     }
 }

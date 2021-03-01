@@ -7,6 +7,10 @@ namespace AmazonWareHouse.Business.Models.Items
 {
     public class EditItemModel : BaseModel
     {
+        public EditItemModel()
+        {
+            this.ModifiedAt = DateTime.UtcNow;
+        }
         [Required]
         [MaxLength(50)]
         public string Name { get; set; }
